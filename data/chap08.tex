@@ -1,0 +1,67 @@
+\chapter{立体几何初步}
+\section{基本立体图形}
+\section{立体图形的直观图I}
+\section{立体图形的直观图II}
+\section{棱柱、棱锥、棱台的表面积与体积}
+\section{圆柱、圆锥、圆台的表面积与体积}
+\section{球的表面积与体积}
+\begin{formula}[球的表面积]
+	设球的半径为 $r$, 则球的表面积
+	$$
+		S_{\text{球}}= 4 \uppi r^{2}.
+	$$
+\end{formula}
+下面给出一个不太严谨的球的表面积公式的证明方法, 主要是利用圆柱侧面积来近似代替球的表面积。
+\begin{note}
+  把一个半径为 $r$ 的球的上半球横向切成 $n$ (无穷大)份，每份等高并且把每份看成一个类似圆柱，其中半径等于底面圆半径，则从下到上第 $k$ 个圆柱的侧面积为
+  $$
+  S(k)=2 \pi r_k h .
+  $$
+  $$
+  \begin{aligned}
+  & \because h=\frac{r}{n}, r_k=\sqrt{r^2-(k h)^2}, \\
+  & \therefore S(k)=\frac{2 \pi r}{n} \sqrt{r^2-(k h)^2}=2 \pi r^2 \sqrt{\frac{1}{n^2}-\frac{k^2}{n^4}} . \\
+  & \therefore S_{\text {球 }}=\lim _{n \rightarrow+\infty} 2[S(1)+S(2)+\cdots+S(n)]=4 \pi r^2 .
+  \end{aligned}
+  $$
+\end{note}  
+
+\begin{formula}[球的体积]
+	设球的半径为 $r$, 则球的体积
+  $$
+  V_{\text{球}}=\frac{4}{3} \uppi r^{3}.
+  $$
+\end{formula}
+
+\begin{example}
+	如图 8.3-4, 某种浮标由两个半球和一个圆柱黏合而成,半球的直径是 $0.3 \mathrm{~m}$, 圆柱高 $0.6 \mathrm{~m}$. 如果在浮标表面涂一层防水漆, 每平方米需要 $0.5 \mathrm{~kg}$ 涂料, 那么给 1000 个这样的浮标涂防水漆需要多少涂料? ( $\uppi$ 取 3.14)
+\end{example}
+\begin{solution}
+一个浮标的表面积为
+	$$
+		2 \uppi \times 0.15 \times 0.6+4 \uppi \times 0.15^2=0.8478\left(\mathrm{~m}^2\right),
+	$$
+
+	所以给 1000 个这样的浮标涂防水漆约需涂料
+	$$
+		0.8478 \times 0.5 \times 1000=423.9(\mathrm{~kg}) .
+	$$
+\end{solution}
+
+
+类比利用圆周长求圆面积的方法, 我们可以利用球的表面积求球的体积. 如图8.3-5,把球 $O$ 的表面分成 $n$ 个小网格, 连接球心 $O$ 和每个小网格的顶点, 整个球体就被分割成 $n$ 个 “小雉体”.
+
+当 $n$ 越大, 每个小网格越小时, 每个 “小雉体” 的底面就越平, “小雉体” 就越近似于棱雉, 其高越近似于球半径 $R$. 设 $O-A B C D$ 是其中一个 “小雉体”, 它的体积
+$$
+V_{O-A B C D} \approx \frac{1}{3} S_{A B C D} R . 
+$$
+
+由于球的体积就是这 $n$ 个 “小雉体” 的体积之和, 而这 $n$ 个 “小雉体” 的底面积之和就是球的表面积. 因此, 球的体积
+$$
+V_{\text {球 }}=\frac{1}{3} S_{\text {球 }} R=\frac{1}{3} \times 4 \pi R^2 \cdot R=\frac{4}{3} \pi R^3 . 
+$$
+
+由此, 我们得到球的体积公式
+$$
+V_{\text {球 }}=\frac{4}{3} \pi R^3 .
+$$
