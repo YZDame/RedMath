@@ -15,9 +15,11 @@
 \RequirePackage{upgreek}
 \RequirePackage{mathrsfs}
 \RequirePackage{commath}
+\RequirePackage{marginnote}
+%\reversemarginpar
 
 \pgfplotsset{compat=1.18}
-\geometry{a4paper}
+\geometry{a4paper, left=4cm, right=4cm, top=4cm, bottom=4cm}
 
 \theoremstyle{definition}
 
