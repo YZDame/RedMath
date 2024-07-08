@@ -1,5 +1,6 @@
 \ProvidesClass{Mayth}
-\LoadClass{ctexbook}
+\LoadClass{ctexbook} %小字电子版
+%\LoadClass[zihao=-4]{ctexbook} %大字打印版
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
@@ -19,10 +20,14 @@
 %\reversemarginpar
 
 \pgfplotsset{compat=1.18}
-\geometry{a4paper, left=4cm, right=4cm, top=4cm, bottom=4cm}
+\geometry{a4paper, left=3cm, right=3cm, top=3cm, bottom=3cm}
 
 \theoremstyle{definition}
-
+\newtheorem{question}{问题}[section]
+\newtheorem{example}{例}[section]
+\newtheorem{exercise}{练习}[section]
+\newtheorem{formula}{公式}[section]
+\newtheorem{definition}{定义}[section]
 \newtheorem*{solution}{解}
 
 \theoremstyle{plain}
