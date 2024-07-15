@@ -1,4 +1,4 @@
-# Mayth:高中数学教学设计(自用)
+# RedMath:高中数学教学设计(自用)
 ## 说明
 本项目是作者本人为了方便自己备课而创建的，欢迎大家参考并提供建议。联系作者：[ykwtii0943@gmail.com](mailto:ykwtii0943@gmail.com)
 ## 教材
