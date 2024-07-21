@@ -1,0 +1,23 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[蒋荣清(2016)]{JiangGaoZhongShuXueDiYiKeDeJiaoXueGouXiang2016}
+蒋荣清.
+\newblock 高中数学第一课的教学构想\allowbreak[J].
+\newblock 数学通讯, 2016\allowbreak (16): 36-40.
+
+\bibitem[XiE(2023)]{XiErBoTeLuGuanBeiLun2023}
+希尔伯特旅馆悖论\allowbreak[J].
+\newblock 维基百科，自由的百科全书, 2023.
+
+\end{thebibliography}

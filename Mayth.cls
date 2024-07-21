@@ -18,9 +18,13 @@
 \RequirePackage{commath}
 \RequirePackage{marginnote} %\reversemarginpar
 \RequirePackage{pifont}
+\RequirePackage{cite} % 引入cite包，用于处理引用
+\RequirePackage{natbib} % 引入natbib包，用于处理参考文献
+\RequirePackage{gbt7714} 
 
 \pgfplotsset{compat=1.18}
 \geometry{a4paper, left=2.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm}
+%\geometry{a4paper, left=4cm, right=4cm, top=3cm, bottom=3cm}
 
 \setcounter{tocdepth}{1}
 
@@ -36,6 +40,7 @@
 \newtheorem*{note}{注记}
 \newtheorem*{analysis}{分析}
 \newtheorem*{property}{性质}
+\newtheorem*{purpose}{设计目的}
 
 \renewcommand{\qedsymbol}{$\blacksquare$}
 \renewcommand{\proofname}{\bf 证明}
@@ -79,6 +84,6 @@
             \tikz[baseline,line width=0.05ex,line join=round]
             \draw (0,.1ex) -- (.8em,.1ex) -- (1em,1.6ex) -- (.2em,1.6ex) -- cycle;}}}
 
-\title{\huge{\textsc{Mayth}: 高中数学人教版教学设计}}
+\title{\huge{\textsc{Mayth}: 我的高中数学教学笔记}}
 \author{\Large{LeyuDame}}
 \date{\Large{\today}}
