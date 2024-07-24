@@ -1,5 +1,6 @@
-\ProvidesClass{Mayth}
-\LoadClass{ctexbook} %小字电子版
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{Mayth}[2024/07/23 v1.0 Mayth class]
+\LoadClass[oneside]{ctexbook} %小字电子版
 %\LoadClass[zihao=-4]{ctexbook} %大字打印版
 
 \RequirePackage{amsmath}
@@ -21,12 +22,21 @@
 \RequirePackage{cite} % 引入cite包，用于处理引用
 \RequirePackage{natbib} % 引入natbib包，用于处理参考文献
 \RequirePackage{gbt7714} 
+\RequirePackage{hyperref}
+
 
 \pgfplotsset{compat=1.18}
-\geometry{a4paper, left=2.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm}
-%\geometry{a4paper, left=4cm, right=4cm, top=3cm, bottom=3cm}
+%% 紧凑打印
+%\geometry{a4paper, left=2.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm}
+%% 书本
+\geometry{a4paper, left=4cm, right=4cm, top=3cm, bottom=3cm}
+%% 16:9 PC横屏 
+%\geometry{paperwidth=24cm, paperheight=13.5cm, left=1cm, right=1cm, top=1cm, bottom=1cm}
+%% 4:3 ipad横屏
+%\geometry{paperwidth=22cm, paperheight=16.5cm, left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm}
 
-\setcounter{tocdepth}{1}
+\setcounter{chapter}{-1} % 第零章开始
+\setcounter{tocdepth}{1} % 目录层级为section
 
 \theoremstyle{definition}
 \newtheorem{question}{问题}[section]
@@ -35,12 +45,14 @@
 \newtheorem{formula}{公式}[section]
 \newtheorem{definition}{定义}[section]
 \newtheorem*{solution}{解}
+\newtheorem{intro}{引入}[section]
+\newtheorem*{property}{性质}
 
 \theoremstyle{plain}
 \newtheorem*{note}{注记}
 \newtheorem*{analysis}{分析}
-\newtheorem*{property}{性质}
 \newtheorem*{purpose}{设计目的}
+
 
 \renewcommand{\qedsymbol}{$\blacksquare$}
 \renewcommand{\proofname}{\bf 证明}
@@ -84,6 +96,9 @@
             \tikz[baseline,line width=0.05ex,line join=round]
             \draw (0,.1ex) -- (.8em,.1ex) -- (1em,1.6ex) -- (.2em,1.6ex) -- cycle;}}}
 
-\title{\huge{\textsc{Mayth}: 我的高中数学教学笔记}}
+% Title, author, and date
+\title{\huge{\textsc{RedMath}: 我的高中数学教学笔记}}
 \author{\Large{LeyuDame}}
 \date{\Large{\today}}
+
+\endinput

@@ -1,5 +1,6 @@
-\chapter*{初高衔接}
+\chapter{初高衔接}
 \section{高中数学第一课}
+\marginnote{2024-7-21}
 \begin{center}
 	原文来源：\citet{JiangGaoZhongShuXueDiYiKeDeJiaoXueGouXiang2016}
 \end{center}
@@ -256,11 +257,360 @@
 
 \begin{note}
 	个人按照时间顺序的三点建议：
-\begin{enumerate}
-	\item     课前——做好预习，提前阅读教材并完成全品“课前预习”部分，了解将要学习的内容，不懂的地方做好标记，带着问题上课；
-	\item 课堂——集中精力听讲，积极参与课堂讨论，及时记笔记。对于不理解的部分，课后及时解决；
-	\item 课后——及时复习当天内容，先自己复习梳理一遍当天所学知识再写作业，按时提交作业，建立数学错题本，学会总结归纳.
-\end{enumerate}
+	\begin{enumerate}
+		\item     课前——做好预习，提前阅读教材并完成全品“课前预习”部分，了解将要学习的内容，不懂的地方做好标记，带着问题上课；
+		\item 课堂——集中精力听讲，积极参与课堂讨论，及时记笔记。对于不理解的部分，课后及时解决；
+		\item 课后——及时复习当天内容，先自己复习梳理一遍当天所学知识再写作业，按时提交作业，建立数学错题本，学会总结归纳.
+	\end{enumerate}
 \end{note}
 
 本文从四个方面设计高中数学起始课,由于内容多,建议用两种方式灵活处理,一是上两节课;二是精简内容,并结合教师自己的特长与兴趣进行设计.
+
+\section{乘法公式与因式分解}
+\subsection{归纳初中知识}
+在初中, 我们学习了多项式的乘法运算, 知道乘法公式可以使多项式的运算变得更为简便. 初中主要学习了两个基本的乘法公式一平方差公式和完全平方公式.
+\begin{formula}[平方差公式]
+	$(a+b)(a-b) = a^2-b^2$.
+\end{formula}
+
+\begin{formula}[完全平方公式]
+	$(a\pm b)^2 = a^2  \pm 2ab + b^2$.
+\end{formula}
+
+\subsection{衔接高中知识}
+高中代数部分是以函数为主线展开学习的,为研究函数的性质, 需要同学们具有较强的代数恒等变形能力, 也就是说,在高中学习中还会遇到更为复杂的多项式的乘法运算. 因此, 在本节中,我们将拓展乘法公式的内容,补充一些高中常用的乘法公式.
+
+由于
+\begin{align}
+	(a+b)^3 & =(a+b)^2(a+b)=\left(a^2+2 a b+b^2\right)(a+b) \\
+	        & =a^3+a^2 b+2 a^2 b+2 a b^2+a b^2+b^3          \\
+	        & =a^3+3 a^2 b+3 a b^2+b^3 .
+\end{align}
+
+于是有
+\begin{formula}[完全立方和公式]
+	$(a+b)^3=a^3+3 a^2 b+3 a b^2+b^3$.
+	\label{完全立方和公式}
+\end{formula}
+
+将\autoref{完全立方和公式}中的 $b$ 全部换成 $-b$, 得到完全立方差公式:
+\begin{formula}[完全立方差公式]
+	$(a-b)^3=a^3-3 a^2 b+3 a b^2-b^3$.
+\end{formula}
+
+由完全立方和公式可得 $(a+b)^3-3 a^2 b-3 a b^2=a^3+b^3$, 即 $(a+b)\left[(a+b)^2-3 a b\right]=a^3+b^3$.
+于是有
+\begin{formula}[立方和公式]
+	$a^3+b^3=(a+b)\left(a^2-a b+b^2\right)$.
+\end{formula}
+
+同理,由完全立方差公式可得 $(a-b)\left[(a-b)^2+3 a b\right]=a^3-b^3$, 即
+\begin{formula}[立方差公式]
+	$a^3-b^3=(a-b)\left(a^2+a b+b^2\right)$.
+\end{formula}
+由于
+\begin{align}
+	(a+b+c)^2 & =[(a+b)+c]^2=(a+b)^2+2(a+b) c+c^2 \\
+	          & =a^2+2 a b+b^2+2 a c+2 b c+c^2    \\
+	          & =a^2+b^2+c^2+2 a b+2 a c+2 b c .
+\end{align}
+
+于是有
+\begin{formula}
+	$(a+b+c)^2=a^2+b^2+c^2+2 a b+2 a c+2 b c$.
+\end{formula}
+
+同时,我们还应注意乘法公式的一些常见变形:
+\begin{enumerate}
+	\item $a^2+b^2=(a+b)^2-2 a b$;
+	\item $a^2+b^2=(a-b)^2+2 a b$;
+	\item $(a+b)^3=a^3+b^3+3 a b(a+b)$;
+	\item $a^3+b^3=(a+b)^3-3 a b(a+b)$.
+\end{enumerate}
+
+\subsection{精讲典型例题}
+\begin{example}
+	已知 $x+y=-5, xy=6$, 求 $x^2+y^2$ 的值.
+\end{example}
+\begin{analysis}
+	利用完全平方公式的变形 $a^2+b^2=(a+b)^2-2 a b$ 进行求解.
+\end{analysis}
+\begin{solution}
+	\begin{align*}
+		\because x+y=-5,   & x y=6.             \\
+		\therefore x^2+y^2 & =(x+y)^2-2 x y     \\
+		                   & =(-5)^2-2 \times 6 \\
+		                   & =13 .
+	\end{align*}
+\end{solution}
+
+\begin{example}
+	分解因式: $8 x^3+27 y^3+36 x^2 y+54 x y^2$.
+\end{example}
+\begin{solution}
+	\begin{align}
+		  & 8 x^3+27 y^3+36 x^2 y+54 x y^2                                   \\
+		= & 8 x^3+36 x^2 y+54 x y^2+27 y^3 \quad (\text{按}x\text{降幂排列}) \\
+		= & (2 x)^3+3(2 x)^2(3 y)+3(2 x)(3 y)^2+(3 y)^3                      \\
+		= & (2 x+3 y)^3 .
+	\end{align}
+\end{solution}
+
+\begin{example}
+	分解因式: $a^6+b^6$.
+\end{example}
+\begin{solution}
+	\begin{align}
+		  & a^6+b^6                                                                        \\
+		= & \left(a^2\right)^3+\left(b^2\right)^3                                          \\
+		= & \left(a^2+b^2\right)\left[\left(a^2\right)^2-a^2 b^2+\left(b^2\right)^2\right] \\
+		= & \left(a^2+b^2\right)\left(a^4-a^2 b^2+b^4\right) .
+	\end{align}
+\end{solution}
+
+\begin{example}
+	分解因式: $a^6-b^6$.
+\end{example}
+\begin{solution}
+	$a^6$ 可以看成平方:
+	\begin{align*}
+		a^6=\left(a^3\right)^2,
+	\end{align*}
+	也可以看成立方:
+	\begin{align*}
+		a^6=\left(a^2\right)^3,
+	\end{align*}
+	于是 $a^6-b^6$ 的分解就有两条路可走.
+	第一条路是先应用平方差公式:
+	\begin{align*}
+		  & a^6-b^6                                                      \\
+		= & \left(a^3\right)^2-\left(b^3\right)^2                        \\
+		= & \left(a^3+b^3\right)\left(a^3-b^3\right)                     \\
+		= & (a+b)\left(a^2-a b+b^2\right)(a-b)\left(a^2+a b+b^2\right) .
+	\end{align*}
+	第二条路是从立方差公式入手:
+	\begin{align*}
+		  & a^6-b^6                                          \\
+		= & \left(a^2\right)^3-\left(b^2\right)^3            \\
+		= & \left(a^2-b^2\right)\left(a^4+a^2 b^2+b^4\right) \\
+		= & (a+b)(a-b)\left(a^4+a^2 b^2+b^4\right) .
+	\end{align*}
+	采用两种方法分解, 获得的结果应当相同. 因此比较
+	\begin{align*}
+		(a+b)\left(a^2-a b+b^2\right)(a-b)\left(a^2+a b+b^2\right)
+	\end{align*}
+	与
+	\begin{align*}
+		(a+b)(a-b)\left(a^4+a^2 b^2+b^4\right),
+	\end{align*}
+
+	我们知道 $a^4+a^2 b^2+b^4$ 不是既约多项式, 并且有
+	\begin{align*}
+		a^4+a^2 b^2+b^4=\left(a^2+a b+b^2\right)\left(a^2-a b+b^2\right)
+	\end{align*}
+	及
+	\begin{align*}
+		a^6-b^6=(a+b)(a-b)\left(a^2+a b+b^2\right)\left(a^2-a b+b^2\right) .
+	\end{align*}
+\end{solution}
+
+\begin{example}
+	当 $a+b+c=0, a^2+b^2+c^2=1$ 时, 求下列各式的值.
+
+	(1) $b c+c a+a b$;
+
+	(2) $a^4+b^4+c^4$.
+\end{example}
+\begin{analysis}
+	将 (1) 与已知联系, 联想已知中的等式, 发现可将 $b c+$ $c a+a b$ 用 $a+b+c$ 和 $a^2+b^2+c^2$ 表示. 由于 $a^4+b^4+c^4=\left(a^2\right)^2+$ $\left(b^2\right)^2+\left(c^2\right)^2$. 由 (1)得到启示, 如果知道 $a^2 b^2+b^2 c^2+c^2 a^2$ 的值, 就能得解.
+\end{analysis}
+\begin{solution}
+	(1) $\because(a+b+c)^2=a^2+b^2+c^2+2(a b+b c+c a)$
+	且 $a+b+c=0, a^2+b^2+c^2=1$,
+
+	$\therefore 0^2=1+2(a b+b c+c a),$
+
+	即 $b c+c a+a b=-\frac{1}{2}$.
+
+	(2)	\begin{align}
+		 & \because(b c+c a+a b)^2                                        \\
+		 & =b^2 c^2+c^2 a^2+a^2 b^2+2\left(a^2 b c+a b^2 c+a b c^2\right) \\
+		 & =b^2 c^2+c^2 a^2+a^2 b^2+2 a b c(a+b+c),                       \\
+		 & \therefore b^2 c^2+c^2 a^2+a^2 b^2=\frac{1}{4} .
+	\end{align}
+	$ \therefore a^4+b^4+c^4=\left(a^2\right)^2+\left(b^2\right)^2+\left(c^2\right)^2+2 a^2 b^2+2 b^2 c^2+2 c^2 a^2 \\
+		=1+2 \times \frac{1}{4}=\frac{3}{2} .$
+\end{solution}
+
+\begin{example}
+	求证 $2^{1984}+1$ 不是质数\cite{DanDunShuXueAoLinPiKeXiaoCongShuChuZhongJuanYinShiFenJieJiQiao2005}.
+\end{example}
+为了将 $2^{1984}+1$ 分解因数, 我们需要知道一个新的公式, 即在 $n$ 为\textbf{正奇数}时, 有
+\begin{formula}
+	\begin{align}
+		a^n+b^n=(a+b)\left(a^{n-1}-a^{n-2} b+a^{n-3} b^2-\cdots-a b^{n-2}+b^{n-1}\right) .
+	\end{align}
+\end{formula}
+\begin{proof}
+	上式不难用乘法验证, 将右边的两个因式相乘便得到 $a^n+b^n$.现在我们有
+	\begin{align}
+		  & 2^{1984}+1                                                                            \\
+		= & \left(2^{64}\right)^{31}+1^{31}                                                       \\
+		= & \left(2^{64}+1\right)\left(2^{64 \times 30}-2^{64 \times 29}+\cdots-2^{64}+1\right) .
+	\end{align}
+	$2^{64}+1$ 是 $2^{1984}+1$ 的真因数, 它大于 1 , 小于 $2^{1984}+1$, 所以 $2^{1984}+1$ 不是质数.
+\end{proof}
+用上述方法可以证明: 当 $n$ 有大于 1 的奇数因数时, $2^n+1$ 不是质数. 类似地, 由乘法可以得到在 $n$ 为\textbf{正整数}时有
+\begin{formula}
+	\begin{equation}
+		a^n-b^n=(a-b)\left(a^{n-1}+a^{n-2} b+a^{n-3} b^2+\cdots+a b^{n-2}+b^{n-1}\right) .
+	\end{equation}
+\end{formula}
+这也是一个有用的公式.
+
+\begin{example}
+	分解因式: $x^5-1$.
+\end{example}
+\begin{solution}
+	$x^5-1=(x-1)\left(x^4+x^3+x^2+x+1\right)$.
+\end{solution}
+\begin{note}
+	上面两道例题蕴含了特殊到一般的数学思想方法.
+\end{note}
+
+\section{根式及其运算}
+\subsection{归纳初中知识}
+在初中, 我们主要学习了二次根式的概念及其运算.
+\begin{enumerate}
+	\item 二次根式定义中 $\sqrt{a}(a \geqslant 0)$ 是一个整体, 表示非负数 $a$ 的算术平方根. 在实数范围内对负数不能施行开平方运算, 故 $a \geqslant 0$ 这个条件必不可少.
+	\item $(\sqrt{a})^2=a(a \geqslant 0), \sqrt{a^2}=|a|=\left\{\begin{array}{l}a(a>0), \\ 0(a=0), \\ -a(a<0) .\end{array}\right.$
+	      \begin{enumerate}
+		      \item $(\sqrt{a})^2(a \geqslant 0)$ 的运算顺序是先求一个非负数的算术平方根, 然后再平方. 注意必须满足 $a \geqslant 0$ 的条件.
+		      \item $\sqrt{a^2}$ 的运算顺序是先平方再开方, 取算术平方根. 故此式对任何实数都有意义. 使用公式时注意 $\sqrt{a^2}=|a|$ 的应用.
+		      \item 化简过程中一定要注意符号问题. 当性质 $\sqrt{a^2}=-a(a<0)$ 逆运用时应是 $a=-\sqrt{a^2}$ $(a<0)$, 即把负数 $a$ 移到根号里面时, 应把“一”号留在根号外面.
+	      \end{enumerate}
+	\item 二次根式具有非负性, 即 $\sqrt{a} \geqslant 0(a \geqslant 0)$.
+\end{enumerate}
+
+\subsection{衔接高中知识}
+高中在二次根式的基础上研究 $n$ 次根式, 学习 $n$ 次根式和分数指数幂的互化以及根式的运算, 另外高中解无理方程、解无理不等式、建立圆雉曲线的方程等, 都需要对二次根式的运算非常焦练、灵活.
+\subsubsection{$n$ 次根式}
+实际上, 数的平方根的概念可以推广. 一般地, 如果 $x^{n}=a$, 那么 x 叫做 a 的 n 次方根. 例如, 由于 $2^4=16$ 和 $(-2)^4=16$, 我们把 2 或 -2 叫做 16 的 4 次方根. 当 n 是偶数时, 正数 a 的正的 n 次方根用符号 $\sqrt[n]{a}$ 表示, 负的 n 次方根用符号 $-\sqrt[n]{a}$ 表示, 也可以把两个方根合起来写作 $\pm \sqrt[n]{a}$. 例如, $\sqrt[4]{16}=2,-\sqrt[4]{16}=-2$, 合起来写作 $\pm \sqrt[4]{16}= \pm 2$.
+类比二次根式的性质, 我们得到 n 次根式的性质:
+\begin{enumerate}
+	\item $(\sqrt[n]{a})^{n}=a\left(n \in \mathbb{N}^*\right)$. 特别地, $(\sqrt{a})^2=a(a \geqslant 0),(\sqrt[3]{a})^3=a(a \in \mathbb{R})$.
+	\item 当 $n$ 是正奇数时, $\sqrt[n]{a^n}=a$; 当 $n$ 是正偶数时, $\sqrt[n]{a^n}=|a|$. 特别地, $\sqrt{a^2}=|a|=$ $\left\{\begin{array}{l}a, a \geqslant 0, \\ -a, a<0, \\ \sqrt[3]{a^3}=a(a \in \mathbb{R}) .\end{array}\right.$
+	\item $\sqrt[n]{a}=a^{\frac{1}{n}}\left(a>0, n>1, n \in \mathbb{N}^*\right) ; \frac{1}{a^n}=a^{-n}\left(a \neq 0, n \in \mathbb{N}^*\right)$.
+\end{enumerate}
+\subsubsection{分母(分子)有理化}
+分母有理化的方法是分母和分子都乘以分母的有理化因式, 化去分母中的根号的过程. 在高中数学中, 有时需要把分式的分子进行有理化, 即分式的分子和分母都乘以分子的有理化因式, 化去分子中的根号.
+
+\subsection{精讲典型例题}
+\begin{example}
+	有理化下列各式的分子:
+
+	(1) $\frac{\sqrt{x+1}+\sqrt{x}}{\sqrt{x+1}-\sqrt{x}}$;
+
+	(2) $\frac{a-1+\sqrt{a^2-1}}{a+1+\sqrt{a^2-1}}(a>1)$.
+\end{example}
+\begin{analysis}
+	$\sqrt{x+1}+\sqrt{x}$ 有理化因式为 $\sqrt{x+1}-\sqrt{x}$, (2) 可先化简约分.
+\end{analysis}
+\begin{solution}
+	(1)
+	\begin{align}
+		\text{原式} & =\frac{(\sqrt{x+1}+\sqrt{x})(\sqrt{x+1}-\sqrt{x})}{(\sqrt{x+1}-\sqrt{x})^2} \\
+		            & =\frac{x+1-x}{(\sqrt{x+1}-\sqrt{x})^2}=\frac{1}{(\sqrt{x+1}-\sqrt{x})^2} .
+	\end{align}
+	(2)
+	\begin{align}
+		  & \frac{a-1+\sqrt{a^2-1}}{a+1+\sqrt{a^2-1}}                                   \\
+		= & \frac{\sqrt{(a-1)^2}+\sqrt{(a+1)(a-1)}}{\sqrt{(a+1)^2}+\sqrt{(a+1)(a-1)}}   \\
+		= & \frac{\sqrt{a-1}(\sqrt{a-1}+\sqrt{a+1})}{\sqrt{a+1}(\sqrt{a+1}+\sqrt{a-1})} \\
+		= & \frac{\sqrt{a-1}}{\sqrt{a+1}}=\frac{a-1}{\sqrt{a^2-1}} .
+	\end{align}
+\end{solution}
+
+\section{无理方程}
+\subsection{归纳初中知识}
+初中我们已经学习了整式、分式、根式的概念, 学习了一元一 （二)次方程、简单二元一次方程组和可化为一元一 (二) 次方程的分式方程 (方程中的分式不超过两个)的解法, 但没有涉及无理方程的解法, 在高中新课程的函数、三角和不等式的学习以及立体几何初步和平面解析几何初步学习中又要经常用到这部分的知识, 为了高中学习顺利, 本专题重点介绍无理方程 (含二次根式)的解法, 希望大家能够掌握.
+
+\subsection{衔接高中知识}
+根号下含有未知数的方程, 叫做无理方程.
+解无理方程的基本思想: 去 “根号”, 化无理方程为有理方程再求解.
+
+解无理方程的基本方法: 平方法, 即方程两边平方化无理方程为有理方程求解, 遇到平方后次数比二次大的较复杂的无理方程可尝试用换元法求解.
+特别注意: 解无理方程最后要验根.
+
+\subsection{精讲典型例题}
+\begin{example}
+	解方程 $\sqrt{3 x-5}-\sqrt{x+2}=1$.
+\end{example}
+\begin{analysis}
+	方程左边有两个二次根式, 如果直接平方, 结果较繁, 一般把其中一个根式移到方程的右边, 使方程左右两边各含有一个根式。
+\end{analysis}
+\begin{solution}
+	移项, 得 $\sqrt{3 x-5}=\sqrt{x+2}+1$,
+
+	两边平方, 得 $3 x-5=1+2 \sqrt{x+2}+x+2$,
+
+	化简, 得 $x-4=\sqrt{x+2}$,
+
+	两边再平方并整理, 得 $x^2-9 x+14=0$,
+
+	解得 $x_1=2, x_2=7$.
+
+	经检验, $x=2$ 是增根, $x=7$ 是原方程的根.
+\end{solution}
+
+\begin{example}
+	设实数 $x>0$, 求使等式
+	\begin{align*}
+		\sqrt{x^2-1}+\sqrt{x^2+4 x+3}=\sqrt{3 x^2+4 x+1}
+	\end{align*}
+	成立的所有 $x$ 的值\cite{葛军2012数学奥林匹克小丛书}.
+\end{example}
+\begin{analysis}
+	观察等式即知方程的各项中都有式子 $\sqrt{x+1}$ (因为 $x>0$, 得 $x+1>0$ ), 从而转化原方程为 $\sqrt{x+1}=0$ 和 $\sqrt{x-1}+\sqrt{x+3}=\sqrt{3 x+1}$. 然后, 逐步去根号转化为易求解的方程.
+\end{analysis}
+\begin{solution}
+	$\sqrt{(x+1)(x-1)}+\sqrt{(x+1)(x+3)}=\sqrt{(3 x+1)(x+1)}$.
+	
+	因为 $x>0$, 所以 $x+1>0$, 从而知 $x-1 \geqslant 0, x+3>0,3 x+1>0$,于是有 $\sqrt{x+1}=0$ 或 $\sqrt{x-1}+\sqrt{x+3}=\sqrt{3 x+1}$.
+	
+	由 $\sqrt{x+1}=0$ 得 $x_1=-1$.
+	
+	由 $\sqrt{x-1}+\sqrt{x+3}=\sqrt{3 x+1}$, 两边平方整理得
+	\begin{align*}
+		2 \sqrt{(x-1)(x+3)}=x-1 .
+	\end{align*}
+
+	从而有 $\sqrt{x-1}=0$ 或 $2 \sqrt{x+3}=\sqrt{x-1}$, 于是 $\sqrt{x-1}=0$ 得 $x_2=1$,由 $2 \sqrt{x+3}=\sqrt{x-1}$ 得 $x_3=-\frac{13}{3}$.
+	经检验, $x=1$ 为符合题中要求的 $x$.
+\end{solution}
+\begin{note}
+	还可以直接通过平方逐次去根号转化为多项式方程求解. 若用此方法, 则题中条件 $x>0$ 可去掉.
+\end{note}
+
+\begin{example}
+	解方程 $2 x^2+3 x+3=5 \sqrt{2 x^2+3 x+9}$.
+\end{example}
+\begin{analysis}
+	$\sqrt{2 x^2+3 x+9}$ 是 $2 x^2+3 x+9$ 的算术平方根, 如果直接平方, 结果很繁, 若设 $\sqrt{2 x^2+3 x+9}=y$, 则原方程可转化为 $y$ 的一元二次方程.
+\end{analysis}
+\begin{solution}
+设 $\sqrt{2 x^3+3 x+9}=y$, 则平方后得 $2 x^2+3 x=y^2-9$,原方程可化为 $y^2-9+3=5 y$, 即 $y^2-5 y-6=0$.
+解这方程得 $y=6$ 或 $y=-1$.
+
+当 $y=-1$ 时, $\sqrt{2 x^2+3 x+9}=-1$ 没有意义,无解, 舍去.
+
+当 $y=6$ 时, $\sqrt{2 x^2+3 x+9}=6$,
+
+解方程得 $x=3$ 或 $x=-\frac{9}{2}$.
+
+检验: 把 $x=-\frac{9}{2}$ 代入原方程, 左边 $\neq$ 右边, 所以 $x=-\frac{9}{2}$ 为原方程的增根.
+
+把 $x=3$ 代入原方程, 左边 $=30=$ 右边, 所以 $x=3$ 是原方程的解.
+
+$\therefore$ 原方程的解为 $x=3$.
+\end{solution}

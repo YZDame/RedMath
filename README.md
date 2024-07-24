@@ -1,4 +1,4 @@
-# RedMath:高中数学教学设计(自用)
+# RedMath: 我的高中数学教学笔记
 ## 说明
 本项目是作者本人为了方便自己备课而创建的，欢迎大家参考并提供建议。联系作者：[ykwtii0943@gmail.com](mailto:ykwtii0943@gmail.com)
 ## 教材
@@ -10,13 +10,15 @@
 
 ## 目录
 ```shell
-Mayth
+RedMath
 │  main.pdf  # 编译后的文件
 │  main.tex  # 主文档
 │  Mayth.cls # 格式控制文档
+|  refs.bib  # 参考文献
 │  README.md 
 │
-└─data # 资料文件夹（目前主要是必修模块）
+└─data # 必修一
+        chap00_初高衔接.tex
         chap01_集合与常用逻辑用语.tex
         chap02_一元二次函数、方程和不等式.tex
         chap03_函数的概念与性质.tex
