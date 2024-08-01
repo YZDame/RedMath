@@ -23,6 +23,9 @@
 \RequirePackage{natbib} % 引入natbib包，用于处理参考文献
 \RequirePackage{gbt7714} 
 \RequirePackage{hyperref}
+\RequirePackage{tcolorbox}
+\RequirePackage{multicol}
+\RequirePackage{titlesec}
 
 
 \pgfplotsset{compat=1.18}
@@ -52,6 +55,14 @@
 \newtheorem*{note}{注记}
 \newtheorem*{analysis}{分析}
 \newtheorem*{purpose}{设计目的}
+
+% 定义新的 board 环境
+\newtcolorbox{board}[1][]{colback=white, colframe=black, rounded corners, boxrule=0.1mm, title={\S\thesection\ #1}, coltitle=black, colbacktitle=white, fonttitle=\normalfont, fontupper=\itshape}
+
+% 使用 multicol 包实现自动分两栏
+\newenvironment{boardenv}[1][]
+  {\begin{board}[#1]\begin{multicols}{2}}
+  {\end{multicols}\end{board}}
 
 
 \renewcommand{\qedsymbol}{$\blacksquare$}
@@ -98,7 +109,7 @@
 
 % Title, author, and date
 \title{\huge{\textsc{RedMath}: 我的高中数学教学笔记}}
-\author{\Large{LeyuDame}}
+\author{\Large{YZDame}}
 \date{\Large{\today}}
 
 \endinput
