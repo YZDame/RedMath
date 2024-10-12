@@ -29,3 +29,5 @@ RedMath
         chap08_立体几何初步.tex
         chapS1_数学建模 建立函数模型解决实际问题.tex
 ```
+
+更多内容请参见[🌈CyberMath](https://github.com/YZDame/CyberMath)
