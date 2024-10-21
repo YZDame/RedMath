@@ -47,6 +47,7 @@
 \newtheorem{exercise}{练习}[section]
 \newtheorem{formula}{公式}[section]
 \newtheorem{definition}{定义}[section]
+\newtheorem{activity}{活动}[section]
 \newtheorem*{solution}{解}
 \newtheorem{intro}{引入}[section]
 \newtheorem*{property}{性质}
