@@ -1,1 +1,328 @@
 \chapter{平面向量及其应用}
+\everymath{\displaystyle}
+\newpage
+\section{三角形四心的向量表示及应用}
+
+\begin{lemma}[奔驰定理]
+    已知点 $O$ 是 $\triangle ABC$ 内部一点. 若 $\mathrm{S}_{\triangle OBC}: \mathrm{S}_{\triangle OAC}: \mathrm{S}_{\triangle OAB}=x: y: z$, 则 $x \lvec{OA} + y \lvec{OB} + z \lvec{OC} = \boldsymbol{0}$；反之亦成立.
+    \begin{center}
+        \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+        \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+            %Shape: Triangle [id:dp41718545377725946] 
+            \draw   (375.51,83.71) -- (408.89,168.41) -- (283.68,168.41) -- cycle ;
+            %Straight Lines [id:da7430270455389383] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (360.9,126.06) -- (374.86,85.6) ;
+            \draw [shift={(375.51,83.71)}, rotate = 109.04] [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Straight Lines [id:da21281938084173158] 
+            \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ]   (360.9,126.06) -- (285.43,167.45) ;
+            \draw [shift={(283.68,168.41)}, rotate = 331.26] [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Straight Lines [id:da9898483314704938] 
+            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (360.9,126.06) -- (407.4,167.09) ;
+            \draw [shift={(408.89,168.41)}, rotate = 221.42] [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Straight Lines [id:da3636995020748923] 
+            \draw  [dash pattern={on 4.5pt off 4.5pt}]  (360.9,126.06) -- (346.2,168.61) ;
+
+            % Text Node
+            \draw (369.32,68.68) node [anchor=north west][inner sep=0.75pt]    {$A$};
+            % Text Node
+            \draw (270.57,167.59) node [anchor=north west][inner sep=0.75pt]    {$B$};
+            % Text Node
+            \draw (407.73,166.45) node [anchor=north west][inner sep=0.75pt]    {$C$};
+            % Text Node
+            \draw (337.18,169.95) node [anchor=north west][inner sep=0.75pt]    {$D$};
+            % Text Node
+            \draw (364.32,114.58) node [anchor=north west][inner sep=0.75pt]    {$O$};
+            % Text Node
+            \draw (355.55,150.73) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ]  {$x$};
+            % Text Node
+            \draw (377.2,125.64) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,opacity=1 ]  {$y$};
+            % Text Node
+            \draw (345.63,119.18) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,opacity=1 ]  {$z$};
+
+
+        \end{tikzpicture}
+    \end{center}
+\end{lemma}
+
+\begin{proof}
+    延长 $AO$ 交 $BC$ 于点 $D$,
+
+    则$\frac{\mathrm{S}_{\triangle OAB}+\mathrm{S}_{\triangle OAC}}{\mathrm{S}_{\triangle OBC}}=\frac{y+z}{x}=\frac{AO}{OD}$,
+
+    $\therefore x \lvec{OA}=-(y+z) \lvec{OD}$,
+
+    从而$x \lvec{OA}+(y+z) \lvec{OD}=\boldsymbol{0}$. (1)
+
+    又由 $\frac{\mathrm{S}_{\triangle OAB}}{\mathrm{S}_{\triangle OAC}}=\frac{z}{y}=\frac{BD}{CD}$,
+
+    $\therefore y \lvec{BD}=z \lvec{DC}$,
+
+    即 $y(\lvec{OD}-\lvec{OB})=z(\lvec{OC}-\lvec{OD})$,
+
+    $\therefore \lvec{OD}=\frac{y}{y+z} \lvec{OB}+\frac{z}{y+z} \lvec{OC}$,
+
+    代入(1)式得: $x \lvec{OA}+y \lvec{OB}+z \lvec{OC}=\boldsymbol{0}$.
+\end{proof}
+
+
+\subsection{重心的向量表达}
+\begin{proposition}
+    对于 $\triangle ABC$, 若 $\lvec{GA}+\lvec{GB}+\lvec{GC}=\boldsymbol{0}$, 则 $G$ 是 $\triangle ABC$ 的重心；反之亦成立.
+\end{proposition}
+
+\begin{proposition}
+    $G$ 是 $\triangle ABC$ 的重心, $P$ 是 $\triangle ABC$ 所在平面上任一点, 则 $\lvec{PG}=\frac{1}{3}(\lvec{PA}+\lvec{PB}+\lvec{PC})$；反之亦成立.
+\end{proposition}
+
+\begin{proposition}
+    已知 $O$ 是平面上一定点, $A, B, C$ 是平面上不共线的三点, 动点 $P$ 满足 $\lvec{OP}=\lvec{OA}+\lambda(\lvec{AB}+\lvec{AC}), \lambda \in(0,+\infty)$, 则 $P$ 的轨迹一定通过 $\triangle ABC$ 的重心.
+\end{proposition}
+
+\subsection{垂心的向量表达}
+\begin{proposition}
+    对于 $\triangle ABC$, 若 $\tan A \cdot \lvec{HA}+\tan B \cdot \lvec{HB}+\tan C \cdot \lvec{HC}=\boldsymbol{0}$, 则 $H$ 是 $\triangle ABC$ 的垂心；反之亦成立.
+\end{proposition}
+
+\begin{proposition}
+    $H$ 是 $\triangle ABC$ 所在平面上一点, 若 $\lvec{HA} \cdot \lvec{HB}=\lvec{HB} \cdot \lvec{HC}=\lvec{HC} \cdot \lvec{HA}$, 则 $H$ 是 $\triangle ABC$ 的垂心；反之亦成立.
+\end{proposition}
+
+\begin{proposition}
+    已知 $O$ 是平面上一定点, $A, B, C$ 是平面上不共线的三点, 动点 $P$ 满足
+    $\lvec{OP}=\lvec{OA}+\lambda\left(\frac{\lvec{AB}}{|\lvec{AB}| \cos B}+\frac{\lvec{AC}}{|\lvec{AC}| \cos C}\right), \lambda \in(0,+\infty)$, 则 $P$ 的轨迹一定通过 $\triangle ABC$ 的垂心.
+\end{proposition}
+
+\begin{proof}
+    由题意得 $\lvec{AP}=\lambda\left(\frac{\lvec{AB}}{|\lvec{AB}| \cos B}+\frac{\lvec{AC}}{|\lvec{AC}| \cos C}\right)$
+
+    \begin{align*}
+        \begin{aligned}
+             & \text { 而 }\left(\frac{\lvec{AB}}{|\lvec{AB}| \cos B}+\frac{\lvec{AC}}{|\lvec{AC}| \cos C}\right) \cdot \lvec{BC}=\frac{\lvec{AB} \cdot \lvec{BC}}{|\lvec{AB}| \cos B}+\frac{\lvec{AC} \cdot \lvec{BC}}{|\lvec{AC}| \cos C} \\
+             & =-|\lvec{BC}|+|\lvec{BC}|                                                                                                                                                                                                   \\
+             & =0
+        \end{aligned}
+    \end{align*}
+
+    $\therefore \lvec{AP} \perp \lvec{BC}$, 动点 $P$ 的轨迹一定通过 $\triangle ABC$ 的垂心.
+\end{proof}
+
+\subsection{内心的向量表达}
+\begin{proposition}
+    对于 $\triangle ABC$, 设 $\mathrm{AB}=c, \mathrm{AC}=b, \mathrm{BC}=a$, 若 $a \cdot \lvec{IA}+b \cdot \lvec{IB}+c \cdot \lvec{IC}=\boldsymbol{0}$, 则点 $I$ 是 $\triangle ABC$ 的内心；反之亦成立.
+\end{proposition}
+
+\begin{proof}
+    $\because \lvec{IB}=\lvec{IA}+\lvec{AB}, \lvec{IC}=\lvec{IA}+\lvec{AC}$, 代入 $a \cdot \lvec{IA}+b \cdot \lvec{IB}+c \cdot \lvec{IC}=\boldsymbol{0}$ 得\\
+    $(a+b+c) \cdot \lvec{IA}+b \cdot \lvec{AB}+c \cdot \lvec{AC}=\boldsymbol{0}$,\\
+    $\because b \cdot \lvec{AB}+c \cdot \lvec{AC}=|\lvec{AC}| \cdot \lvec{AB}+|\lvec{AB}| \cdot \lvec{AC}$\\
+    $=|\lvec{AB}| \cdot|\lvec{AC}| \cdot\left(\frac{\lvec{AB}}{|\lvec{AB}|}+\frac{\lvec{AC}}{|\lvec{AC}|}\right)$\\
+    $=bc\left(\frac{\lvec{AB}}{|\lvec{AB}|}+\frac{\lvec{AC}}{|\lvec{AC}|}\right)$\\
+    $\therefore \lvec{AI}=\frac{bc}{a+b+c}\left(\frac{\lvec{AB}}{|\lvec{AB}|}+\frac{\lvec{AC}}{|\lvec{AC}|}\right)$\\
+    $\therefore AI$ 与 $\angle BAC$ 的角平分线共线, 即 $AI$ 平分 $\angle BAC$\\
+    同理 $BI$ 平分 $\angle ABC, CI$ 平分 $\angle ACB$, 从而 $I$ 是 $\triangle ABC$ 的内心.
+\end{proof}
+
+\begin{proposition}
+    对于 $\triangle ABC$, 若 $O$ 满足
+
+    $$
+        \lvec{OA} \cdot\left(\frac{\lvec{AB}}{|\lvec{AB}|}-\frac{\lvec{AC}}{|\lvec{AC}|}\right)=\lvec{OB} \cdot\left(\frac{\lvec{BA}}{|\lvec{BA}|}-\frac{\lvec{BC}}{|\lvec{BC}|}\right)=\lvec{OC} \cdot\left(\frac{\lvec{CA}}{|\lvec{CA}|}-\frac{\lvec{CB}}{|\lvec{CB}|}\right)=0,
+    $$
+    则点 $O$ 是 $\triangle ABC$ 的内心；反之亦成立.
+\end{proposition}
+
+\subsection{外心的向量表达}
+\begin{proposition}
+    对于 $\triangle ABC$, 若 $\sin 2A \cdot \lvec{OA}+\sin 2B \cdot \lvec{OB}+\sin 2C \cdot \lvec{OC}=\boldsymbol{0}$, 则 $O$ 是 $\triangle ABC$ 的外心；反之亦成立.
+\end{proposition}
+
+\begin{proposition}
+    $O$ 是 $\triangle ABC$ 所在平面上一点, 若 $\lvec{OA}^{2}=\lvec{OB}^{2}=\lvec{OC}^{2}$, 则 $O$ 是 $\triangle ABC$ 的外心；反之亦成立.
+\end{proposition}
+
+\begin{proposition}
+    已知 $O$ 是平面上一定点, $A, B, C$ 是平面上不共线的三点, 动点 $P$ 满足 $\lvec{OP}=\frac{\lvec{OB}+\lvec{OC}}{2}+\lambda\left(\frac{\lvec{AB}}{|\lvec{AB}| \cos B}+\frac{\lvec{AC}}{|\lvec{AC}| \cos C}\right), \lambda \in(0,+\infty)$, 则 $P$ 的轨迹一定通过 $\triangle ABC$ 的外心.
+\end{proposition}
+
+\begin{proof}
+    设边 $BC$ 的中点为 $M$, 则 $\lvec{OM}=\frac{\lvec{OB}+\lvec{OC}}{2}$, 由题意得
+    $$
+        \lvec{MP}=\lambda\left(\frac{\lvec{AB}}{|\lvec{AB}| \cos B}+\frac{\lvec{AC}}{|\lvec{AC}| \cos C}\right)
+    $$
+
+    \begin{align*}
+        \text { 而 }
+        \left(\frac{\lvec{AB}}{|\lvec{AB}| \cos B}+\frac{\lvec{AC}}{|\lvec{AC}| \cos C}\right) \cdot \lvec{BC} & =\frac{\lvec{AB} \cdot \lvec{BC}}{|\lvec{AB}| \cos B}+\frac{\lvec{AC} \cdot \lvec{BC}}{|\lvec{AC}| \cos C} \\
+                                                                                                               & =-|\lvec{BC}|+|\lvec{BC}|                                                                                  \\
+                                                                                                               & =0
+    \end{align*}
+
+    $\therefore \lvec{AM} \perp \lvec{BC}, P$ 的轨迹一定通过 $\triangle ABC$ 的外心.
+\end{proof}
+
+\subsection{欧拉定理的向量表达}
+\begin{proposition}
+    若 $O, H$ 分别是 $\triangle ABC$ 的外心和垂心, 则 $\lvec{OH}=\lvec{OA}+\lvec{OB}+\lvec{OC}$.
+\end{proposition}
+
+\begin{proof}
+    连接 $BO$ 延长交圆 $O$ 于点 $D$, 连接 $AD, CD$, 则 $AD \perp AB, BC \perp CD$\\
+    又 $CH \perp AB, AH \perp BC$\\
+    $\therefore CH \parallel AD, AH \parallel CD$\\
+    $\therefore$ 四边形 $ADCH$ 为平行四边形\\
+    $\therefore \lvec{AH}=\lvec{DC}=\lvec{DO}+\lvec{OC}=\lvec{OB}+\lvec{OC}$\\
+    $\therefore \lvec{OH}=\lvec{OA}+\lvec{AH}=\lvec{OA}+\lvec{OB}+\lvec{OC}$.
+\end{proof}
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+    %Shape: Circle [id:dp8638038572746185] 
+    \draw  [color={rgb, 255:red, 196; green, 193; blue, 193 }  ,draw opacity=1 ] (276.75,155.75) .. controls (276.75,116.4) and (308.65,84.5) .. (348,84.5) .. controls (387.35,84.5) and (419.25,116.4) .. (419.25,155.75) .. controls (419.25,195.1) and (387.35,227) .. (348,227) .. controls (308.65,227) and (276.75,195.1) .. (276.75,155.75) -- cycle ;
+    %Straight Lines [id:da5117781865796789] 
+    \draw    (300.25,102.5) -- (287.25,193) ;
+    %Straight Lines [id:da40133194140523853] 
+    \draw    (300.25,102.5) -- (415.25,180) ;
+    %Straight Lines [id:da9190277466348651] 
+    \draw    (287.25,193) -- (415.25,180) ;
+    %Straight Lines [id:da030337826743070506] 
+    \draw  [dash pattern={on 0.84pt off 2.51pt}]  (300.25,102.5) -- (310,191.25) ;
+    %Straight Lines [id:da6462402259947018] 
+    \draw  [dash pattern={on 0.84pt off 2.51pt}]  (292,161.75) -- (415.25,180) ;
+    %Straight Lines [id:da6722741273531898] 
+    \draw    (348,155.75) -- (288.96,191.95) ;
+    \draw [shift={(287.25,193)}, rotate = 328.48] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+    %Straight Lines [id:da48269426050329733] 
+    \draw    (348,155.75) -- (301.59,103.99) ;
+    \draw [shift={(300.25,102.5)}, rotate = 48.12] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+    %Straight Lines [id:da4597963546280104] 
+    \draw    (348,155.75) -- (413.37,179.32) ;
+    \draw [shift={(415.25,180)}, rotate = 199.83] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+    %Straight Lines [id:da19024306376007294] 
+    \draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]   (348,155.75) -- (309.46,163.84) ;
+    \draw [shift={(307.5,164.25)}, rotate = 348.15] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+    %Straight Lines [id:da30127359953371946] 
+    \draw  [dash pattern={on 0.84pt off 2.51pt}]  (300.25,102.5) -- (409,118.75) ;
+    %Straight Lines [id:da8720800419583445] 
+    \draw  [dash pattern={on 0.84pt off 2.51pt}]  (409,118.75) -- (415.25,180) ;
+    %Straight Lines [id:da023165060311018726] 
+    \draw  [dash pattern={on 0.84pt off 2.51pt}]  (409,118.75) -- (348,155.75) ;
+
+    % Text Node
+    \draw (286.5,86.9) node [anchor=north west][inner sep=0.75pt]    {$A$};
+    % Text Node
+    \draw (275,190.9) node [anchor=north west][inner sep=0.75pt]    {$B$};
+    % Text Node
+    \draw (416,175.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
+    % Text Node
+    \draw (411,104.4) node [anchor=north west][inner sep=0.75pt]    {$D$};
+    % Text Node
+    \draw (342,137.4) node [anchor=north west][inner sep=0.75pt]    {$O$};
+    % Text Node
+    \draw (308.5,143.9) node [anchor=north west][inner sep=0.75pt]    {$H$};
+
+
+\end{tikzpicture}
+\hspace{2cm}
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+    %Shape: Circle [id:dp5576661954222375] 
+    \draw  [color={rgb, 255:red, 196; green, 193; blue, 193 }  ,draw opacity=1 ] (276.75,155.75) .. controls (276.75,116.4) and (308.65,84.5) .. (348,84.5) .. controls (387.35,84.5) and (419.25,116.4) .. (419.25,155.75) .. controls (419.25,195.1) and (387.35,227) .. (348,227) .. controls (308.65,227) and (276.75,195.1) .. (276.75,155.75) -- cycle ;
+    %Straight Lines [id:da7258859971367271] 
+    \draw    (390,99) -- (291,198) ;
+    %Straight Lines [id:da3156736380760452] 
+    \draw    (390,99) -- (410,192) ;
+    %Straight Lines [id:da7465470237686334] 
+    \draw    (291,198) -- (410,192) ;
+    %Straight Lines [id:da033955443365715654] 
+    \draw  [dash pattern={on 0.84pt off 2.51pt}]  (291,198) -- (406,173) ;
+    %Straight Lines [id:da7312470733297733] 
+    \draw  [dash pattern={on 0.84pt off 2.51pt}]  (291.5,195.5) -- (400,145.5) ;
+    %Straight Lines [id:da9722534008421468] 
+    \draw    (348,155.75) -- (361.69,162.15) ;
+    \draw [shift={(363.5,163)}, rotate = 205.07] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+    %Straight Lines [id:da5490453987009081] 
+    \draw    (348,155.75) -- (392.18,175.68) ;
+    \draw [shift={(394,176.5)}, rotate = 204.28] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+    %Straight Lines [id:da9976698491167126] 
+    \draw  [dash pattern={on 0.84pt off 2.51pt}]  (390,99) -- (394.5,192.5) ;
+    %Straight Lines [id:da4368693118593838] 
+    \draw  [dash pattern={on 0.84pt off 2.51pt}]  (350.5,195) -- (390,99) ;
+
+    % Text Node
+    \draw (389,82.9) node [anchor=north west][inner sep=0.75pt]    {$A$};
+    % Text Node
+    \draw (275,190.9) node [anchor=north west][inner sep=0.75pt]    {$B$};
+    % Text Node
+    \draw (412,187.9) node [anchor=north west][inner sep=0.75pt]    {$C$};
+    % Text Node
+    \draw (354.5,163.9) node [anchor=north west][inner sep=0.75pt]    {$G$};
+    % Text Node
+    \draw (334.5,154.4) node [anchor=north west][inner sep=0.75pt]    {$O$};
+    % Text Node
+    \draw (376,176.4) node [anchor=north west][inner sep=0.75pt]    {$H$};
+
+
+\end{tikzpicture}
+
+\begin{proposition}
+    若 $O, G, H$ 分别是 $\triangle ABC$ 的外心, 重心, 垂心, 则 $\lvec{OG}=\frac{1}{3} \lvec{OH}$.
+\end{proposition}
+
+\begin{proof}
+    $\because G$ 是重心, 由命题 2 知 $\lvec{OG}=\frac{1}{3}(\lvec{OA}+\lvec{OB}+\lvec{OC})$\\
+    又由命题 12 知 $\lvec{OH}=\lvec{OA}+\lvec{OB}+\lvec{OC}$\\
+    $\therefore \lvec{OG}=\frac{1}{3} \lvec{OH}$.
+\end{proof}
+
+\section{练习题}
+\begin{exercise}
+    已知 $O$ 是 $\triangle ABC$ 的重心, 点 $P$ 满足 $\lvec{OP}=\frac{1}{3}\left(\frac{1}{2} \lvec{OA}+\frac{1}{2} \lvec{OB}+2 \lvec{OC}\right)$, 则点 $P$ 一定是 $\triangle ABC$ 的( \quad ). \\
+    A. $AB$ 边中线的中点 \qquad B. $AB$ 边中线的三等分点（非重心） \\
+    C. 重心 \qquad D. $AB$ 边的中点
+\end{exercise}
+
+\begin{exercise}
+    $O$ 是 $\triangle ABC$ 所在平面上一点, 若 $\lvec{OA}^{2}+\lvec{BC}^{2}=\lvec{OB}^{2}+\lvec{CA}^{2}=\lvec{OC}^{2}+\lvec{AB}^{2}$, 则 $O$ 是 $\triangle ABC$ 的( \quad ). \\
+    A. 外心 \qquad B. 内心 \qquad C. 垂心 \qquad D. 重心
+\end{exercise}
+
+\begin{exercise}
+    $P$ 是 $\triangle ABC$ 所在平面上一点, 若 $\lvec{PA} \cdot \lvec{PB}+\lvec{PB} \cdot \lvec{PC}+\lvec{PA} \cdot \lvec{PC}=0$, 则 $P$ 是 $\triangle ABC$ 的( \quad ). \\
+    A. 外心 \qquad B. 内心 \qquad C. 垂心 \qquad D. 重心
+\end{exercise}
+
+\begin{exercise}
+    $P$ 是 $\triangle ABC$ 所在平面上一点, 若 $\lvec{CA}^{2}=\lvec{CB}^{2}-2 \lvec{AB} \cdot \lvec{CP}$, 则 $P$ 的轨迹一定通过 $\triangle ABC$ 的( \quad ). \\
+    A. 外心 \qquad B. 内心 \qquad C. 垂心 \qquad D. 重心
+\end{exercise}
+
+\begin{exercise}
+    已知非零向量 $\lvec{AB}, ~ \lvec{AC}$ 满足 $\left(\frac{\lvec{AB}}{|\lvec{AB}|}+\frac{\lvec{AC}}{|\lvec{AC}|}\right) \cdot \lvec{BC}=0$, 且 $\frac{\lvec{AB}}{|\lvec{AB}|} \cdot \frac{\lvec{AC}}{|\lvec{AC}|}=\frac{1}{2}$, 则 $\triangle ABC$ 为( \quad ). \\
+    A. 三边均不相等的三角 \qquad B. 直角三角形 \\
+    C. 等腰非等边三角形 \qquad D. 等边三角形
+\end{exercise}
+
+\begin{exercise}
+    $P$ 是 $\triangle ABC$ 所在平面内与 $A$ 不重合的一点, 且满足 $\lvec{AB}+\lvec{AC}=3 \lvec{AP}$, 则 $P$ 是 $\triangle ABC$ 的( \quad ). \\
+    A. 外心 \qquad B. 内心 \qquad C. 垂心 \qquad D. 重心
+\end{exercise}
+
+\begin{exercise}
+    已知 $O$ 是 $\triangle ABC$ 的外接圆的圆心, 半径为 1, 且 $\lvec{OA}+\lvec{OB}+\lvec{OC}=\boldsymbol{0}$, 则 $\lvec{OA} \cdot \lvec{OB}$ 等于 ( \quad ).
+\end{exercise}
+
+\begin{exercise}
+    $\triangle ABC$ 的外接圆圆心为 $O$, 两条边上的高的交点为 $H$, 若 $\lvec{OH}=m(\lvec{OA}+\lvec{OB}+\lvec{OC})$, 则实数 $m=$ ( \quad ).
+\end{exercise}
+
+\begin{exercise}
+    已知 $G$ 是 $\triangle ABC$ 的重心, 过 $G$ 作直线与 $AB, AC$ 分别相交于 $M, N$ 两点, 若 $\lvec{AM}=x \lvec{AB}, \lvec{AN}=y \lvec{AC}$, 则 $\frac{1}{x}+\frac{1}{y}=$ ( \quad ).
+\end{exercise}
+
+\texttt{答案: 1-6 BCCADD \quad 7. -1/2 \quad  8. 1  \quad 9. 3}

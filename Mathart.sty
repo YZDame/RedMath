@@ -1,7 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{Mayth}[2024/07/23 v1.0 Mayth class]
-\LoadClass[oneside]{ctexbook} %小字电子版
-%\LoadClass[zihao=-4]{ctexbook} %大字打印版
+\ProvidesPackage{Mathart}
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
@@ -26,7 +24,7 @@
 \RequirePackage{tcolorbox}
 \RequirePackage{multicol}
 \RequirePackage{titlesec}
-
+\RequirePackage{tikz}
 
 \pgfplotsset{compat=1.18}
 %% 紧凑打印
@@ -38,14 +36,11 @@
 %% 4:3 ipad横屏
 %\geometry{paperwidth=22cm, paperheight=16.5cm, left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm}
 
-\setcounter{chapter}{-1} % 第零章开始
+% 移除章节计数器设置，因为 ctexart 没有 chapter
+% \setcounter{chapter}{-1}
 \setcounter{tocdepth}{1} % 目录层级为section
 
 \theoremstyle{definition}
-\newtheorem{proposition}{命题}[section]
-\newtheorem{theorem}{定理}[section]
-\newtheorem{lemma}{引理}[section]
-\newtheorem{corollary}{推论}[section]
 \newtheorem{question}{问题}[section]
 \newtheorem{example}{例}[section]
 \newtheorem{exercise}{练习}[section]
@@ -81,7 +76,8 @@
 \def\tableautorefname{表}
 \def\partautorefname{篇}
 \def\appendixautorefname{附录}
-\def\chapterautorefname{章}
+% 删除章节相关定义
+% \def\chapterautorefname{章}
 \def\sectionautorefname{节}
 \def\paragraphautorefname{段落}
 \def\subparagraphautorefname{子段落}
@@ -111,10 +107,5 @@
     \mathord{\text{%
             \tikz[baseline,line width=0.05ex,line join=round]
             \draw (0,.1ex) -- (.8em,.1ex) -- (1em,1.6ex) -- (.2em,1.6ex) -- cycle;}}}
-
-% Title, author, and date
-\title{\huge{\textsc{RedMath}: 我的高中数学教学笔记}}
-\author{\Large{LeyuDame}}
-\date{\Large{\today}}
 
 \endinput
